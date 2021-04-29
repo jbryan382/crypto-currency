@@ -16,10 +16,6 @@ export function App() {
     console.log(currencyResponse)
   }, [currencyResponse])
 
-  function sanitizeAmount() {
-    return amount
-  }
-
   return (
     <>
       <h1> Crypto-Currency-Converter</h1>
@@ -38,7 +34,7 @@ export function App() {
       <input
         type="number"
         onChange={(event) => setAmount(event.target.value)}
-        value={sanitizeAmount()}
+        value={amount}
       />
     </>
   )
